@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- usercenter -->
+	<bean id="usercenterDao" class="com.tiangong.dao.usercenter.imp.UserCenterDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+     <bean id="usercenterService" class="com.tiangong.service.usercenter.imp.UserCenterServiceImp">
+        <property name="usercenterDao">
+            <ref bean="usercenterDao"/>
+        </property>
+    </bean>
+	<bean id="usercenterAction" class="com.tiangong.web.action.usercenter.UserCenterAction"
+		scope="prototype">
+		<property name="usercenterService">
+		   <ref bean="usercenterService"/>
+		</property>
+	</bean>
+	<!-- usercenter -->
+	
+	
+	<!-- activity -->
+	
+	<!-- RmUser -->
+	<bean id="rmUserDao" class="com.tiangong.dao.activity.imp.RmUserDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmUserService" class="com.tiangong.service.activity.imp.RmUserServiceImp">
+		<property name="rmUserDao">
+			<ref bean="rmUserDao"/>
+		</property>
+	</bean>
+	<bean id="rmUserAction" class="com.tiangong.web.action.activity.RmUserAction">
+		<property name="rmUserService">
+			<ref bean="rmUserService"/>
+		</property>
+	</bean>
+	
+	
+	<!-- RmUserDetail -->
+	<bean id="rmUserDetailDao" class="com.tiangong.dao.activity.imp.RmUserDetailDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmUserDetailService" class="com.tiangong.service.activity.imp.RmUserDetailServiceImp">
+		<property name="rmUserDetailDao">
+			<ref bean="rmUserDetailDao"/>
+		</property>
+	</bean>
+	
+	
+	<!-- RmUserClassDetail -->
+	<bean id="rmUserClassDetailDao" class="com.tiangong.dao.activity.imp.RmUserClassDetailDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmUserClassDetailService" class="com.tiangong.service.activity.imp.RmUserClassDetailServiceImp">
+		<property name="rmUserClassDetailDao">
+			<ref bean="rmUserClassDetailDao"/>
+		</property>
+	</bean>
+	
+	<!-- RmUserClassList -->
+	<bean id="rmUserClassListDao" class="com.tiangong.dao.activity.imp.RmUserClassListDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmUserClassListService" class="com.tiangong.service.activity.imp.RmUserClassListServiceImp">
+		<property name="rmUserClassListDao">
+			<ref bean="rmUserClassListDao"/>
+		</property>
+	</bean>
+	
+	<!-- activity -->
+
+</beans>

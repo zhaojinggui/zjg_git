@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	
+	<!-- wechat -->
+	<bean id="wechatDao" class="com.tiangong.dao.wechat.imp.WechatDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    <bean id="wechatService" class="com.tiangong.service.wechat.imp.WechatServiceImp">
+        <property name="wechatDao">
+            <ref bean="wechatDao"/>
+        </property>
+    </bean>
+	<bean id="wechatAction" class="com.tiangong.web.action.wechat.WeChatAction"
+		scope="prototype">
+		<property name="wechatService">
+		   <ref bean="wechatService"/>
+		</property>
+	</bean>
+<!-- wechat -->
+
+	<!-- activity -->
+	<bean id="rmActivityUserDao" class="com.tiangong.dao.activity.imp.RmActivityUserDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmActivityUserService" class="com.tiangong.service.activity.imp.RmActivityUserServiceImp">
+		<property name="rmActivityUserDao">
+			<ref bean="rmActivityUserDao"/>
+		</property>
+	</bean>
+	<bean id="rmActivityUserAction" class="com.tiangong.web.action.activity.RmActivityUserAction"
+		scope="prototype">
+		<property name="rmActivityUserService">
+			<ref bean="rmActivityUserService"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="rmActivityCardRecordDao" class="com.tiangong.dao.activity.imp.RmActivityCardRecordDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmActivityCardRecordService" class="com.tiangong.service.activity.imp.RmActivityCardRecordServiceImp">
+		<property name="rmActivityCardRecordDao">
+			<ref bean="rmActivityCardRecordDao"/>
+		</property>
+	</bean>
+	<bean id="rmActivityCardRecordAction" class="com.tiangong.web.action.activity.RmActivityCardRecordAction" 
+	scope="prototype">
+		<property name="rmActivityCardRecordService">
+			<ref bean="rmActivityCardRecordService"/>
+		</property>
+	</bean>
+	
+	<bean id="rmActivityYzOrderRecordDao" class="com.tiangong.dao.activity.imp.RmActivityYzOrderRecordDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmActivityYzOrderRecordService" class="com.tiangong.service.activity.imp.RmActivityYzOrderRecordServiceImp">
+		<property name="rmActivityYzOrderRecordDao">
+			<ref bean="rmActivityYzOrderRecordDao"/>
+		</property>
+	</bean>
+	<bean id="kDTApiAction" class="com.tiangong.kdt.action.KDTApiAction">
+		<property name="rmActivityYzOrderRecordService">
+			<ref bean="rmActivityYzOrderRecordService"/>
+		</property>
+	</bean>
+	
+	<bean id="orderRecordAction" class="com.tiangong.web.action.activity.RmActivityYzOrderRecordAction">
+		<property name="rmActivityYzOrderRecordService" ref="rmActivityYzOrderRecordService" />
+		<property name="rmActivityYzYzmService" ref="rmActivityYzYzmService" />
+	</bean>
+	
+		<bean id="rmActivityYzYzmDao" class="com.tiangong.dao.activity.imp.RmActivityYzYzmDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="rmActivityYzYzmService" class="com.tiangong.service.activity.imp.RmActivityYzYzmServiceImp">
+		<property name="rmActivityYzYzmDao">
+			<ref bean="rmActivityYzYzmDao"/>
+		</property>
+	</bean>
+	<!-- activity -->
+</beans>

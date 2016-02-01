@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px auto;
+	font: 12px/1.5em Simsun, Verdana, Arial, "Lucida Grande", Lucida, sans-serif;
+	color: #666;
+	padding-top: 0px;
+	background:#e2f3fb;
+	background-image:url(images/dl_body.gif);
+	background-position:top;
+	background-repeat:repeat-x;
+	}
+a:link{ color: #555; text-decoration: none;
+}
+a:visited{ color: #555; text-decoration: none;
+}
+a:hover{ color: #e3527c; text-decoration: none;
+}
+a:active{ color: #555; text-decoration: none;
+}
+a img{ border:0}
+form,ul,li,dl,dt,dd,p,span{margin:0;padding:0;}
+ul,li{list-style:none outside;}
+.separat{height:10px; font-size:0px; line-height:10px;}
+.clear{font-size:0px; height:0px; clear:both; line-height:0px;}
+.border4{ border:#646464 1px solid; width:150px; height:18px; line-height:18px; background:url(images/inputbg.gif) repeat-x}
+.border41{ border:#646464 1px solid; width:80px; height:18px; line-height:18px; background:url(images/inputbg.gif) repeat-x}
+.color14{ color:#1b3f4d; font-size:14px}
+
+
+.top{ width:1004px; height:80px; padding:0px; margin:0 auto;}
+.sysname{ width:1004px; height:53px; padding:0px; margin:0 auto; margin-bottom:30px;}
+.logo{ width:80px; height:53px; float:left; margin-left:250px; display:inline}
+.name{ width:500px; height:53px; float:left;margin-top:80px;}
+
+.login{ width:345px; height:345px; padding:80px 10px 0px 10px; margin:auto; background:url(../images/dlbg.gif) no-repeat}
+.serv{ width:100%; height:55px; line-height:55px; text-align:center; margin-top:35px;}
+.bottom{ background:url(images/dlpt_b.gif) no-repeat; height:85px; width:1001px; padding:0px 1px; margin:auto; margin-top:100px;}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<constant name="struts.multipart.maxSize" value="1000000000"></constant>
+
+	<package name="_system" extends="struts-default" namespace="/">
+		
+		<action name="user" class="com.tiangong.web.action.system.UserAction">
+            <result name="userEdit" >jsp/system/user/userEdit.jsp</result>
+            <result name="logout" type="redirect" >/login.jsp</result>
+            <result name="sessionout" type="redirect" >/login.jsp</result>
+		</action>
+		
+	    <action name="role" class="com.tiangong.web.action.system.RoleAction">
+		</action>
+		
+		<action name="fun" class="com.tiangong.web.action.system.FunAction">
+		</action>
+		
+		<action name="dict" class="com.tiangong.web.action.system.DictionaryAction">
+		</action>
+		
+		<action name="wechat" class="com.tiangong.web.action.wechat.WeChatAction">
+          <result name="apply" >jsp/wechat/apply.jsp</result>
+          <result name="teacher">/jsp/usercenter/teacherPage.jsp</result>
+          <result name="userreadinglist">/jsp/usercenter/userReadingList.jsp</result>
+          <result name="userband">/jsp/usercenter/bind_accontsPage.jsp</result>
+          <result name="register">/jsp/usercenter/userReading.jsp</result>
+		</action>
+		<action name="usercenter" class="com.tiangong.web.action.usercenter.UserCenterAction">
+          <result name="userreadinglist">/jsp/usercenter/userReadingList.jsp</result>
+          <result name="userreadingedit">/jsp/usercenter/userReadingEdit.jsp</result>
+		</action>	
+			
+		<!-- activity -->
+			<action name="activityUser" class="com.tiangong.web.action.activity.RmActivityUserAction">
+			</action>
+			<action name="activityCardRecord" class="com.tiangong.web.action.activity.RmActivityCardRecordAction">
+			</action>
+			<action name="rmUser" class="com.tiangong.web.action.activity.RmUserAction">
+				<result name="userreadinglist">/jsp/usercenter/userReadingList.jsp</result>
+				<result name="teacher" type="redirect">teacher!toTeacherPageJsp.action?name=${rmUser.name}&amp;password=${rmUser.password}</result>
+			</action>
+			<action name="teacher" class="com.tiangong.web.action.activity.TeacherAction">
+				<result name="success">/jsp/usercenter/teacherPage.jsp</result>
+				<result name="toClassListJsp">/jsp/usercenter/class_listPage.jsp</result>
+			</action>
+			
+			<action name="kdtApi" class="com.tiangong.kdt.action.KDTApiAction">
+				<result name="success">/jsp/usercenter/orderList.jsp</result>
+			</action>
+			
+			<action name="orderRecord" class="orderRecordAction">
+				<result name="success">/jsp/usercenter/orderList.jsp</result>
+			</action>
+		<!-- activity -->
+		
+	</package>
+	
+</struts>    

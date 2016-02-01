@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+
+	<bean id="placeholderConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:init.properties</value>
+		</property>
+	</bean>
+	<context:component-scan base-package="com.tiangong"></context:component-scan>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${datasource.driverClassName}"></property>
+		<property name="url" value="${datasource.url}"></property>
+		<property name="username" value="${datasource.username}"></property>
+		<property name="password" value="${datasource.password}"></property>
+		<property name="maxActive" value="${datasource.maxActive}"></property>
+		<property name="maxIdle" value="${datasource.maxIdle}"></property>
+		<property name="maxWait" value="${datasource.maxWait}"></property>
+		<property name="initialSize" value="${datasource.initialSize}"></property>
+		<property name="timeBetweenEvictionRunsMillis" value="${datasource.timeBetweenEvictionRunsMillis}"></property>
+		<property name="minEvictableIdleTimeMillis" value="${datasource.minEvictableIdleTimeMillis}"></property>
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${hibernate.dialect}
+				</prop> 
+				<prop key="hibernate.show_sql">
+					${hibernate.show_sql}
+				</prop>
+				<prop key="hibernate.format_sql">
+					${hibernate.format_sql}
+				</prop>
+				<prop key="hibernate.jdbc.fetch_size">
+					${hibernate.jdbc.fetch_size}
+				</prop>
+				<prop key="hibernate.jdbc.batch_size">
+					${hibernate.jdbc.batch_size}
+				</prop>
+				<prop key="hibernate.connection.release_mode">
+					${hibernate.connection.release_mode}
+				</prop>
+				<prop key="hibernate.cache.use_second_level_cache">
+					${hibernate.cache.use_second_level_cache}
+				</prop>
+				<prop key="hibernate.cache.use_query_cache">
+					${hibernate.cache.use_query_cache}
+				</prop>
+				<prop key="hibernate.cache.provider_class">
+					${hibernate.cache.provider_class}
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">
+					${hibernate.hbm2ddl.auto}
+				</prop>
+			</props>
+		</property>
+		<property name="mappingLocations">
+			<list>
+				<value>classpath*:com/tiangong/bean/*.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+<!--    user -->
+	<bean id="userDAO" class="com.tiangong.dao.system.imp.UserDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    <bean id="userService" class="com.tiangong.service.system.imp.UserServiceImp">
+        <property name="userDAO">
+            <ref bean="userDAO"/>
+        </property>
+   </bean>
+	<bean id="userAction" class="com.tiangong.web.action.system.UserAction"
+		scope="prototype">
+		<property name="userService">
+		   <ref bean="userService"/>
+		</property>
+		<property name="dictService">
+		   <ref bean="dictService"/>
+		</property>
+	</bean>
+<!--	  user -->
+
+<!-- role -->
+	<bean id="roleDao" class="com.tiangong.dao.system.imp.RoleDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    <bean id="roleService" class="com.tiangong.service.system.imp.RoleServiceImp">
+        <property name="roleDao">
+            <ref bean="roleDao"/>
+        </property>
+   </bean>
+	<bean id="roleAction" class="com.tiangong.web.action.system.RoleAction"
+		scope="prototype">
+		<property name="roleService">
+		   <ref bean="roleService"/>
+		</property>
+	</bean>
+<!-- role -->
+
+<!-- module -->
+	<bean id="funDao" class="com.tiangong.dao.system.imp.FunctionDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    <bean id="funService" class="com.tiangong.service.system.imp.FunctionServiceImp">
+        <property name="funDao">
+            <ref bean="funDao"/>
+        </property>
+   </bean>
+	<bean id="funAction" class="com.tiangong.web.action.system.FunAction"
+		scope="prototype">
+		<property name="funService">
+		   <ref bean="funService"/>
+		</property>
+	</bean>
+<!-- module -->
+
+<!-- dictionary -->
+	<bean id="dictDao" class="com.tiangong.dao.system.imp.DictionaryDaoImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+    <bean id="dictService" class="com.tiangong.service.system.imp.DictionaryServiceImp">
+        <property name="dictDao">
+            <ref bean="dictDao"/>
+        </property>
+   </bean>
+	<bean id="dictAction" class="com.tiangong.web.action.system.DictionaryAction"
+		scope="prototype">
+		<property name="dictService">
+		   <ref bean="dictService"/>
+		</property>
+	</bean>
+	<bean id="springUtil" class="com.tiangong.comm.SpringUtil" />
+	
+<!-- dictionary -->	
+ 	<import resource="center_bean.xml"/>
+ 	<import resource="wechat_bean.xml"/>
+ 	<import resource="timer.xml"/>
+<!--  	<import resource="app-redis.xml"/> -->
+</beans>

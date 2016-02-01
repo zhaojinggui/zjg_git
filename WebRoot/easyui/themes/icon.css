@@ -1,0 +1,336 @@
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat;
+}
+
+.export{
+	background:url('tree/Isafe_09.png') no-repeat;
+}
+
+.search{
+	background:url('tree/Isearch_01.png') no-repeat;
+}
+
+.comp-man{
+    background: url('tree/comp_man.gif') no-repeat;
+}
+.comp-create{
+    background: url('tree/dy_comp_add.png') no-repeat;
+}
+.comp-audit{
+    background: url('tree/comp_audit.png') no-repeat;
+}
+.comp-exec{
+    background: url('tree/comp_exec.gif') no-repeat;
+}
+.comp-modify{
+    background: url('tree/comp_mod.png') no-repeat;
+}
+.comp-monitor{
+    background: url('tree/comp_monitor.gif') no-repeat;
+}
+.comp-search{
+    background: url('tree/comp_search.gif') no-repeat;
+}
+.comp-export{
+    background: url('tree/comp_export.gif') no-repeat;
+}
+.comp-templete{
+    background: url('tree/comp_templete.png') no-repeat;
+}
+.staticComp-man{
+    background: url('tree/static_comp.png') no-repeat;
+}
+.sec-obj{
+    background: url('tree/Isystem_09.png') no-repeat;
+}
+.obj-man{
+    background: url('tree/Isafe_08.png') no-repeat;
+}
+.obj-comp{
+    background:url('tree/Isafe_11.png') no-repeat; 
+}
+.sys-conf{
+    background: url('tree/system.gif') no-repeat;
+}
+.user-man{
+   background: url('tree/user.png') no-repeat;
+}
+.user-man1{
+   background: url('tree/user_add.png') no-repeat;
+}
+.user-role{
+   background: url('tree/group_link.png') no-repeat;
+}
+.user-obj{
+   background: url('tree/Isafe_06.png') no-repeat;
+}
+.role-man{
+   background: url('tree/Isystem_12.png') no-repeat;
+}
+.role-man1{
+   background: url('tree/role_add.png') no-repeat;
+}
+.role-perms-add{
+   background: url('tree/group_gear.png') no-repeat;
+}
+.role-perms-mod{
+   background: url('tree/role_edit.png') no-repeat;
+}
+.syslog{
+   background: url('tree/Iadmin_03.png') no-repeat;
+}
+.syslog-search{
+   background: url('tree/log.gif') no-repeat;
+}
+.tarff-export{
+   background: url('tree/export.gif') no-repeat;
+}
+.tarff-import{
+   background: url('tree/import.gif') no-repeat;
+}
+.chart{
+   background: url('tree/chart.png') no-repeat;
+}
+.alarm-condition{
+   background: url('tree/alert_config.gif') no-repeat;
+}
+.console{
+   background: url('tree/Isystem_01.png') no-repeat;
+}
+.database-oper{
+   background: url('tree/database.gif') no-repeat;
+}
+.syslog-server{
+   background: url('tree/Isafe_08.png') no-repeat;
+}
+.userpwd-mod{
+   background: url('tree/Isystem_03.png') no-repeat;
+}
+.sec-lev{
+   background: url('tree/Isafe_10.png') no-repeat;
+}
+.sec-cat{
+   background: url('tree/Isafe_11.png') no-repeat;
+}
+.timer{
+   background: url('tree/Isystem_07.png') no-repeat;
+}
+.blacklist{
+   background: url('tree/Isafe_05.png') no-repeat;
+}
+.email-conf{
+   background: url('tree/email.png') no-repeat;
+}
+.notice{
+   background: url('tree/notice.png') no-repeat;
+}
+.org{
+   background: url('tree/organisation.png') no-repeat;
+}
+.menu-conf{
+   background: url('tree/menu_conf.png') no-repeat ;
+}
+
+.security-conf{
+   background: url('tree/Isafe_01.png') no-repeat;
+}
+
+.system-conf{
+  background: url('tree/sys_conf.png') no-repeat;
+}
+
+.system-record{
+  background: url('tree/Isystem_06.png') no-repeat;
+}
+
+.policy-base{
+  background: url('tree/database.png') no-repeat;
+}
+
+.policy-enhanced{
+  background: url('tree/database_add.png') no-repeat;
+}
+
+.no-approve{
+	background: url('tree/tag_red.png') no-repeat;
+}
+
+.no-execute{
+	background: url('tree/tag_blue.png') no-repeat;
+}
+.succ-execute{
+	background: url('tree/comp_templete.png') no-repeat;
+}
+.req-mod{
+	background: url('tree/static_comp.png') no-repeat;
+}
+
+.law-book{
+    background: url('tree/book.png') no-repeat;
+}
+
+.chart-pie{
+     background: url('tree/chart_pie.png') no-repeat;
+}
+
+.ldap-server{
+     background:url('tree/ldap.gif') no-repeat; 
+}
+.user-approve{
+     background:url('tree/user_edit.png') no-repeat; 
+}
+
+.user-fun{
+     background:url('tree/user_role.gif') no-repeat; 
+}
+.sys-configer{
+     background:url('tree/sysconf.png') no-repeat; 
+}
+.sys-dictionary{
+     background:url('tree/dictionary.png') no-repeat; 
+}
+.customer{
+     background:url('tree/customers.png') no-repeat; 
+}
+.huoban{
+     background:url('tree/huoban.png') no-repeat; 
+}
+.zixun{
+     background:url('tree/zixun.png') no-repeat; 
+}
+.guilei{
+	 background:url('tree/rule.gif') no-repeat;
+}
+.leimu{
+	 background:url('tree/leimu.png') no-repeat;
+}
+.zhangjie{
+	 background:url('tree/zhangjie.png') no-repeat;
+}
+.shuize{
+	 background:url('tree/shuize.png') no-repeat;
+}
+.jianguan{
+	 background:url('tree/jianguan.png') no-repeat;
+}
+.shenbao{
+	 background:url('tree/shenbao.png') no-repeat;
+}
+.jianyan{
+	 background:url('tree/jianyan.png') no-repeat;
+}
+.jiamao{
+	 background:url('tree/jiamao.png') no-repeat;
+}
+.fuwu1{
+	 background:url('tree/fuwu1.png') no-repeat;
+}
+.fuwu2{
+	 background:url('tree/fuwu2.png') no-repeat;
+}
+.package{
+	 background:url('tree/package.png') no-repeat;
+}
+.servicedown{
+	 background:url('tree/service-download.png') no-repeat;
+}
+.serviceup{
+	 background:url('tree/service-upload.png') no-repeat;
+}
+.servicecheck{
+	 background:url('tree/user-check.png') no-repeat;
+}
+.open{
+	 background:url('tree/open.png') no-repeat;
+}
+.pause{
+	 background:url('tree/pause.png') no-repeat;
+}
+.password{
+	 background:url('tree/key.png') no-repeat;
+}
+.qiye{
+	 background:url('tree/Isystem_08.png') no-repeat;
+}
+.root{
+	 background:url('tree/root.png') no-repeat;
+}
+.openstatus{
+	 background:url('tree/openstatus.png') no-repeat;
+}
+.closestatus{
+	 background:url('tree/closestatus.png') no-repeat;
+}
+.operator{
+	 background:url('tree/pwd_edit.png') no-repeat;
+}
+.history{
+	 background:url('tree/Isafe_10.png') no-repeat;
+}
+.card{
+	background:url('tree/vcard.png') no-repeat;
+}
+.car{
+	background:url('tree/car.png') no-repeat;
+}
+.email{
+	background:url('tree/email.png') no-repeat;
+}
+.purchase_apply{
+	background:url('tree/cart_add.png') no-repeat;
+}
+.purchase_manager{
+	background:url('tree/cart_manage.png') no-repeat;
+}
+.coins{
+	background:url('tree/coins.png') no-repeat;
+}
+.document{
+	background:url('tree/folder_user.png') no-repeat;
+}
+.money{
+	background:url('tree/money.png') no-repeat;
+}
+	

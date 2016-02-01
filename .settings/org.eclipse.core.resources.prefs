@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebRoot/easyui/easyui-lang-zh_CN.js=UTF-8
+encoding//WebRoot/easyui/tree_data.json=UTF-8
+encoding//WebRoot/js/myTime.js=UTF-8
+encoding//WebRoot/js/validator.js=UTF-8
+encoding//src/com/tiangong=UTF-8
+encoding//src/com/tiangong/dao/system/DictionaryDao.java=UTF-8
+encoding//src/com/tiangong/dao/system/imp/UserDaoImp.java=UTF-8
+encoding//src/com/tiangong/dao/wechat/imp/WechatDaoImp.java=UTF-8

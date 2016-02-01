@@ -1,0 +1,16 @@
+ /*表单验证样式*/
+em {
+	font-style:normal; /*字体不倾斜*/
+	font-weight: 500;
+	padding-right: 1em;
+	vertical-align: middle;
+	color: red;
+}
+em.error {
+	background: url("../images/unchecked.gif") no-repeat 0px 0px;
+	padding-left: 16px;
+}
+em.success {
+	background: url("../images/checked.gif") no-repeat 0px 0px;
+	padding-left: 16px;
+}

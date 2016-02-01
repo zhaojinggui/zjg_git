@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+.subject_div{
+	border: 1px solid #DADADA;
+    height: 500px;;
+    width: 700px;
+}
+.subject_div ul{
+	  padding: 5px 0 0;
+}
+.subject_div ul li{
+	float: left;
+    height: 20px;
+    padding: 4px 8px 0 17px;
+    text-align: right;
+    width: 300px;
+}
+.subject_div ul li span{
+	float: left;
+	margin-left: 60px;
+}
+.subject_div ul li textarea {
+	margin-left: 120px;
+}

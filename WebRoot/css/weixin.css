@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* css reset */
+html, body, div, span,  object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas,figure, figcaption, footer, header, hgroup,
+menu, nav,section, summary,
+time, mark, audio, video,button,input,select,option {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family:"微软雅黑";
+  font-size: 100%;-webkit-text-size-adjust:none;
+ }
+h2,h3,h4{font-weight: normal;-webkit-text-size-adjust:none;}
+button{font-size:1.3rem;background:url(../images/weixin/button_background.jpg);border-radius:0.3rem;border: 0;color: #fff; background-size:100% 100%;display: block; height: 3.2rem;width:86%; line-height: 3.2rem; margin:1rem 6%;}
+
+/* applyPage css*/
+.main_applyPage ,
+.main_accontsPage ,
+.main_registerPage,
+.main_fingerPage{z-index:1;overflow:hidden;background: #f0f0f0; position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+.main_accontsPage h2,
+.main_applyPage h2 ,
+.main_registerPage h2,
+.main_fingerPage h2{font-size:1.5rem; text-align: center; font-weight: normal;margin:1rem 0;}
+.apply_inputList {width: 80%;margin:1.2rem 7%; background: #fff;padding: 3%;border-radius:0.5rem;}
+.apply_inputList label {font-size:1em;height: 3rem; color: #737373; line-height: 3rem;position:relative; display: block;border-bottom:1px solid #f0f0f0; }
+.apply_inputList label:last-child {border-bottom: 0;}
+.apply_inputList label input{padding-left:33%; width:67%;background:transparent; border:0;font-size: 1rem; display:block;background: transparent; height:3rem;position:absolute;left:0;top:0;float: right;font-family: inherit;}
+button.submit{font-size:1.3rem;background:url(../images/weixin/button_background.jpg);border-radius:0.3rem;border: 0;color: #fff; background-size:100% 100%;display: block; height: 3rem;width:86%; line-height: 3rem; margin:1rem auto;}
+.prompt_massge {color: red; display: block; font-size: 1rem; text-align: center;}
+
+.main_applyPage_next {display:none;z-index:2;overflow:hidden;background:rgba(0,0,0,0.82);color: #fff; position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+.main_applyPage_next p{font-size: 0.8rem;margin:.2rem 0 .2rem; text-align: center;}
+.main_applyPage_next img.erweima{display:block;margin:0 24%; width:50%;border:0.5rem solid rgba(255,255,255,0.4);}
+.main_applyPage_next span.right_img{display:block;margin:0.2rem auto 0; width:3.75rem; height:3.75rem;border-radius:3.25rem;background: url(../images/weixin/right.png) no-repeat #fff; background-size: 100% 100%; }
+.main_applyPage_next h2{font-size: 1.35rem; text-align: center;margin:0.3rem 0;}
+.main_applyPage_next h3{font-size: 0.82rem; text-align: center;margin:0.5rem 0;}
+.main_applyPage_next h4{font-size: 1rem;margin:0.3rem 6%;}
+.main_applyPage_next .button_card {font-size:1.3rem;border:2px solid #fff;background:transparent; border-radius:0.3rem;color:#fff;display: block; height: 2.2rem;line-height:0;width:70%;  margin:.35rem auto;}
+
+/*acctonsPage css*/
+.main_accontsPage label {font-size: 1.5rem;}
+.acctonsPage_inputList {background: #fff; width:90%; height: 9rem;padding:1.5rem 5%;}
+.tel_yzm {border:1px solid #cdcbcb;border-bottom: 0; margin-bottom: 1rem;}
+.tel_yzm label {font-size: 1rem;padding-left: 3rem;border-bottom:1px solid #cdcbcb; color: #858585; height: 3rem;display: block; line-height: 3rem;}
+.tel_yzm label.tel {background:url(../images/weixin/tel.jpg) no-repeat left center; background-size: auto 100%;}
+.tel_yzm label.yzm {background:url(../images/weixin/rzm.jpg) no-repeat left center; background-size: auto 100%;}
+.tel_yzm label span{display: block; height: 3rem;line-height: 3rem;float: left;}
+.tel_yzm label input{background:transparent;font-size: 1rem;display: block; height: 3rem; width:75%;padding:0 0 0 10px; float: left;}
+.main_accontsPage label input[type="radio"]{height: 1rem;width:1rem;}
+
+/* main_registerPage */
+.main_registerPage {background:url(../images/weixin/register_background.jpg) no-repeat left bottom #fff;background-size: 100% auto;}
+.register_inputList {border:1px solid #cdcbcb;border-bottom: 0; width:86%;margin:6%;background:#fff;}
+.register_inputList label {font-size: 1rem;padding-left:1rem;border-bottom:1px solid #cdcbcb; color: #000; height: 3rem;display: block; line-height: 3rem;}
+.register_inputList label span{width: 28%;display: block;float: left; height: 3rem;line-height: 3rem;}
+.register_inputList label input{background:transparent;width: 72%;font-size:0.8rem;display: block;float: left; height: 3rem;line-height: 3rem;color: #858585;}
+.register_inputList label.yzm_input input{width: 40%;padding-right: 32%;}
+.register_inputList label.yzm_input{position: relative;}
+.register_inputList label.yzm_input button{font-size:0.75rem;position: absolute; line-height: 2.2rem; right: 2%; top:0.5rem;margin:0;padding:0;display: block;width: 25%; height: 2.2rem;}
+
+/* main_fingerPage css */
+.main_fingerPage .register_inputList label {height: 2.2rem;line-height: 2.2rem;}
+.main_fingerPage .register_inputList label span{width: 45%;display: block;float: left; height: 2.2rem;line-height: 2.2rem;}
+.main_fingerPage label input{background:transparent;width: 55%;font-size:1rem;display: block;float: left; height: 2.2rem;line-height: 2.2rem;color: #858585;}
+.main_fingerPage label.image { height: 4rem;line-height: 4rem;}
+.main_fingerPage label.image span{ height: 4rem;line-height: 4rem;}
+.main_fingerPage label.image img , .class_list img.image{ height: 3.5rem;margin:0.25rem 0;border-radius: 0.5rem;}
+.main_fingerPage label select {height: 2.2rem;line-height: 2.2rem;border:0;font-size:1rem;background: transparent;color: #858585;}
+.main_fingerPage label select option{height: 2.2rem;line-height: 2.2rem;}
+/* teacherPage css */
+.main_fingerPage .class_list label{height: 5rem !important;}
+.left_main{width:78%; display: block; float: left; height: 5rem}
+.left_main  img{ display: block; float: left; height: 4rem; margin:0.5rem; margin-left: 0;}
+.left_main h3{font-size:1rem;  color:#000;display: block; height: 1rem;}
+.left_main span{font-size:0.8rem; color:#858585;display: block;width: 60% !important; height: 1rem !important;}
+.right_main{width:22%;color: #e98631;background:url(../images/weixin/read_more.jpg) no-repeat right center;background-size: auto 100%;  display: block; float: left; height: 5rem;line-height: 5rem; !important}
+
+/* class_listPage css */
+.class_list img.image {margin:0.75rem 1rem 0.75rem 0;}
+.left_main h3.top_mar{margin-top: .5rem;}
+.left_main h3 strong {color: #e98631;font-weight: normal;margin-left: .75rem;}
+h2.en_class{margin:1rem 0 !important;}
+
+@media (min-width:320px){
+	body{font-size: 16px;}	
+}
+@media (min-width:480px){
+	body{font-size: 22px;}	
+}
+@media (min-width:540px){
+	body{font-size: 24px;}	
+}
+@media (min-width:720px){
+	body{font-size: 22px;}	
+}
+
+@media (device-width:375px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone 6 */
+	body{font-size: 20px;}	
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:.8rem auto;}
+
+	.tel_yzm label input{width:74%;}
+}
+@media (device-width:414px) and (-webkit-min-device-pixel-ratio:3.0){/* 兼容iphone6 plus */
+	body{font-size: 22px;}
+	.apply_inputList label ,
+	.apply_inputList label input{height:3.3rem; line-height: 3.3rem;}
+	button.submit{margin:0.5rem auto;}
+
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:.8rem auto;}
+}
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+	body{font-size: 16px;}
+	.apply_inputList label ,
+	.apply_inputList label input{height:2.75rem; line-height: 2.75rem;}
+	button.submit{margin:3% auto;}
+	.main_fingerPage h2 {margin:.5rem auto;}
+	.main_applyPage h2 {margin:0.8rem auto;}
+	.main_fingerPage .register_inputList label,
+	.main_fingerPage .register_inputList label span,
+	.main_fingerPage .register_inputList label input {height: 2rem;line-height: 2rem;}
+	.main_fingerPage label.image { height: 4rem;line-height: 4rem;}
+	.main_fingerPage h2.nomargin {margin:0 auto !important;}
+	.apply_inputList { margin: 0.85rem 7%;}
+}
+@media (device-height:568px){/* 兼容iphone5 */
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:1rem auto;}
+	.main_applyPage_next h4{margin-left:6% }
+	.main_applyPage_next p.text_blue{margin:0rem auto;}
+}
+@media screen (min-width: 1024px){
+	body{font-size:30px;}
+}
+.main_fingerPage .nomargin {margin:0 6%;}
+body.auto_scroll .main_applyPage ,
+body.auto_scroll .main_accontsPage ,
+body.auto_scroll .main_registerPage,
+body.auto_scroll .main_fingerPage{overflow-y:auto; }
+/* -- 教师页面新增CSS --*/
+.erweima_png {width:83%;margin: 0 auto;display: block;}
+	.next_new h2 {font-size: 2rem;margin: 0.5rem auto;}
+	.next_new h4 {font-size: 1rem;width:80%;margin: 2rem auto;border-bottom: 2px solid #fff;height: 1.2rem;line-height: 1.2rem;padding-left: 15px;background: url(../images/weixin/nav_left.png) no-repeat left top;background-size: auto 100%; }
+	.next_new h3{font-size: 1.4rem;}
+	h3.next2{margin: 2rem auto;}	
+	.next_new h4:first-child {letter-spacing:8px; }
+	.next_new h4:last-child {letter-spacing:-1.5px; }
+	.next_new h4.card_tel {letter-spacing:-1.5px; }
+	.letter-3 {letter-spacing: -2px;}
+	@media (device-width:375px) and (-webkit-min-device-pixel-ratio:2),(device-width:414px) and (-webkit-min-device-pixel-ratio:3.0){/* 兼容iphone 6+ */
+		.next_new h4{letter-spacing:2px;}
+		.next_new h4:last-child {letter-spacing:0px; }
+		.next_new h4.card_tel {letter-spacing:0px; }
+		h4.letter-3 {letter-spacing: -4px;}
+	}
+	.card_info {background: #ebebeb; border-radius: 0.5rem; width: 85%;margin: 0 auto;color: #000;}
+	.card_info p{text-align: left; padding-left: 0.5rem;}
+	.card_info h5{ padding: 0.5rem;padding-bottom: 0;font-size: 1rem}
+	.card_info p.date{color: #898989;margin:0.5em auto;}
+	.card_info p.text_blue {color: #013156;margin:0em auto;}
+	.card_info p.text_blue strong {color: #000;}
+	h3.next3{margin: 0.8rem auto;font-size: 1.3rem;}
+	h3.next4{font-size:0.9rem;margin-bottom: 1rem; }
+	.card_info a{font-size: 1rem; display: block;margin: 0.5rem; text-decoration: none;color: #000;border-top:1px solid #cdcdcd;height: 2rem;line-height: 2rem;background: url(../images/weixin/right_nav.png) no-repeat right top;background-size: auto 100%; }	
+	h4.card_tel{margin: 1rem auto;}
+	.ck_new {margin-top:0;}
+	a[tel]{color: #fff;}
+	div[align="center"] a[tel]{color: #000;}
+	label span {font-size: 1rem;}
+	.main_applyPage h4 {font-size: 1rem}
+	#address {padding-left: 40%;width: 60%;}

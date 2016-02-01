@@ -1,0 +1,35 @@
+.table{
+	
+	border-collapse:collapse;
+	border-spacing:0;
+	margin-left:9px;
+	border-top: 1px solid #91BFE7;
+	border-left: 1px solid #91BFE7;
+	border-right: 1px solid #91BFE7;
+	border-bottom: 1px solid #91BFE7;
+	box-shadow:none;
+	border-radius:0;
+}
+.table th,.table td{
+	border:1px solid #c8d6f0;
+	padding:0.3em 0.7em;
+}
+.table th{
+	background-color: #daedff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	border-top:1px;
+	border-left: 1px;
+	border-right: 1px;
+	border-bottom: none;
+}
+
+table td{
+	font-size: 12px;
+}
+
+
+
+
+

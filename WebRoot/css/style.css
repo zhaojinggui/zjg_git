@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*信息提示*/
+.msg{
+  	background-color: #F0FFF0;
+	border: 1px solid #00EA00;
+	padding: 5px 5px 5px 25px;
+	background-image: url(../images/standard_msg_ok.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	width: 120px;
+	text-align: center;	
+}
+
+.actionMessage{
+  width: 80px;
+}
+
+body {
+	background: #FFF;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+form,table,tr,td,div {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+/* 头部样式 */
+#in_top {
+	background: url(../images/in_topC.jpg) repeat-x;
+	height: 117px;
+}
+
+#in_topL {
+	float: left;
+	width: 528px;
+	height: 117px;
+	background: url(../images/in_topL.jpg) no-repeat;
+}
+
+#in_topR {
+	float: right;
+	width: 280px;
+	height: 117px;
+	background: url(../images/in_topR.jpg) no-repeat;
+	text-align: right;
+	line-height: 25px;
+	font-size: 12px;
+}
+
+#in_topRa {
+	margin-right: 10px;
+	color: #FFF;
+}
+
+#in_topRa a:link,#in_topRa a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#in_topRa a:hover {
+	color: #FF0;
+	text-decoration: underline;
+}
+
+#in_topRb {
+	margin: 32px 10px auto auto;
+	color: #FFF;
+}
+
+#in_topRb a:link,#in_topRb a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#in_topRb a:hover {
+	color: #FF0;
+	text-decoration: underline;
+}
+
+#in_topRc {
+	margin: 4px 10px auto auto;
+	color: #FFF;
+	line-height: 20px;
+}
+
+#in_topRc a:link,#in_topRc a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#in_topRc a:hover {
+	color: #FF0;
+	text-decoration: underline;
+}
+
+/* 头部样式 */
+#in_foot {
+	background: url(../images/in_foot.jpg) repeat-x bottom;
+	height: 37px;
+	line-height: 37px;
+	color: #FFF;
+	text-align: center;
+}
+
+/* 左侧菜单样式 */
+#main-div {
+	background: #FFF;
+	margin-top: 3px;
+}
+
+#menu-list {
+	padding: 0;
+	margin: 0;
+}
+
+#menu-list ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	color: #333;
+}
+
+#menu-list li {
+	padding-left: 16px;
+	line-height: 27px;
+}
+
+#menu-list li ul li {
+	line-height: 22px;
+}
+
+#main-div a:visited,#menu-list a:link {
+	color: #333;
+	text-decoration: none;
+}
+
+#menu-list a:active {
+	color: #333;
+}
+
+#menu-list a:hover {
+	color: #999;
+	text-decoration: underline;
+}
+
+.explodey {
+	background: url(../images/in_left_y.jpg) no-repeat;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.exploden {
+	background: url(../images/in_left_n.jpg) no-repeat;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.menu-item {
+	font-weight: normal;
+}
+
+/* 当前位置样式 */
+.current {
+	background: url(../images/in_right_current.jpg) repeat-x 0px -38px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.currentL {
+	background: url(../images/in_right_current.jpg) no-repeat 0px 0px;
+	width: 40px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.currentR {
+	background: url(../images/in_right_current.jpg) no-repeat 0px -76px;
+	width: 40px;
+	height: 35px;
+	line-height: 35px;
+}
+
+/* 按钮样式 */
+.btn_add,.btn_back,.btn_next,.btn_refresh,.btn_print,.btn_view,.btn_edit,.btn_copy,.btn_delete,.btn_search,.btn_approve,.btn_bak,.btn_import,.btn_out,.btn_to
+	{background:url(../images/btn.gif) no-repeat;padding-left:17px;margin-left:10px;color:#333;text-decoration:none;height:18px;line-height:18px;}
+.btn_add{background-position:0px 0px;}
+.btn_back{background-position:0px -20px;}
+.btn_next{background-position:0px -40px;}
+.btn_refresh{background-position:0px -60px;}
+.btn_print{background-position:0px -80px;}
+.btn_view{background-position:0px -100px;}
+.btn_edit{background-position:0px -120px;}
+.btn_copy{background-position:0px -140px;}
+.btn_delete{background-position:0px -160px;}
+.btn_search{background-position:0px -180px;}
+.btn_approve{background-position:0px -200px;}
+.btn_bak{background-position:0px -220px;}
+.btn_out{background-position:0px -240px;}
+.btn_import{background-position:0px -260px;}
+.btn_to{background-position:0px -280px;}
+.submit, .reset, .cancel{background:url(../images/submit.jpg) no-repeat left top;width:61px;height:24px;border:0px;color:#FFF;padding-top:4px;margin:10px 5px;cursor:pointer;}
+.reset{background:url(../images/reset.jpg);color:#FFF;}
+.cancel{background:url(../images/cancel.jpg);color:#FFF;}
+.btnmargin0{margin:0px;}
+
+/* 右侧菜单样式 */
+.tblist {
+	clear: both;
+}
+
+.tblist th {
+	background: url(../images/in_right_title.jpg) repeat-x 0px -34px;
+	letter-spacing: 1px;
+	height: 33px;
+	line-height: 33px;
+	color: #FFF;
+	border-left: #6CB9EF 1px solid;
+}
+
+.tblistL {
+	background: url(../images/in_right_title.jpg) no-repeat 0px 0px;
+	height: 33px;
+	line-height: 33px;
+	border: none;
+}
+
+.tblistR {
+	background: url(../images/in_right_title.jpg) no-repeat 0px -68px;
+	width: 10px;
+	height: 33px;
+	float: right;
+}
+
+.in_right {
+	background: url(../images/in_right_sel.jpg) repeat-x bottom;
+	text-align: center;
+}
+
+.in_right td {
+	background: url(../images/in_right_sel.jpg) repeat-x bottom;
+	height: 30px;
+	line-height: 30px;
+	color: #F60;
+}
+
+.in_right a:link,.in_right a:visited {
+	text-decoration: none;
+	color: #F60;
+}
+
+.in_right a:hover {
+	text-decoration: underline;
+	color: #F00;
+}
+
+.in_rightno {
+	background: #FFF;
+	text-align: center;
+}
+
+.lone {
+	border-left: none;
+}
+
+.tblist td {
+	border-left: #6CB9EF 1px solid;
+	border-bottom: #6CB9EF 1px solid;
+	line-height: 30px;
+}
+
+.noborder {
+	border-left: none;
+}
+
+.in_page {
+	background: url(../images/in_right_page.jpg) repeat-x 0px -60px;
+	height: 55px;
+}
+
+.in_pageL {
+	background: url(../images/in_right_page.jpg) no-repeat 0px 0px;
+	height: 55px;
+	width: 10px;
+}
+
+.in_pageR {
+	background: url(../images/in_right_page.jpg) no-repeat 0px -120px;
+	height: 55px;
+	width: 10px;
+}
+
+/* 表单控制 */
+.n1{color:#333;line-height:22px;font-size:12px;text-align:right;}
+.tbfrm{clear:both;border:#6CB9EF 1px solid;border-top:none;border-bottom:none;}
+.tbfrm th{background:url(../images/in_right_title.jpg) repeat-x 0px -34px;height:32px;color:#FFF;letter-spacing:1px;}
+.tbfrm table{background:#D7EBFF;margin:10px;}
+.tbfrm table td{background:#FFF;padding:3px 0px 3px 2px;}
+.in_pagefrm{background:url(../images/in_right_page.jpg) repeat-x 0px -60px;height:55px;border:#6CB9EF 1px solid;border-top:none;}
+
+
+.mouseOver {
+	background: url("../images/in_right_sel.jpg");
+	text-align: center;
+}
+
+.mouseOut0 {
+	background-color: "white";
+	text-align: center;
+}
+
+.mouseOut1 {
+	background-color: "white";
+	text-align: center;
+}
+
+.mouseClick {
+	background: url(../images/in_right_sel.jpg) repeat-x bottom;
+	text-align: center;
+}
+
+.mouseClick1 {
+	background: url(../images/in_right_sel.jpg) repeat-x bottom;
+	text-align: center;
+}

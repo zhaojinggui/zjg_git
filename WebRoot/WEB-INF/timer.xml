@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+
+	<!-- 定时任务开始 -->
+	<!-- 执行任务方法所在的类 -->
+	<bean id="kDTApiAction" class="com.tiangong.kdt.action.KDTApiAction"/>
+	<!-- 1.定义任务 （要执行的方法） -->
+	<bean id="kdtApiOrder" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 指定方法所在的类 -->
+		<property name="targetObject" ref="kDTApiAction"/>
+		<!-- 指定方法名称 -->
+		<property name="targetMethod" value="getAllOrder"/>
+		<!--指定目标封装为有状态的任务，有状态的任务不能并发执行，无状态的任务可并发执行-->
+		<property name="concurrent" value="false"/>
+	</bean>
+	<!-- 2.任务执行策略配置（按周期执行的任务(定义触发时间)） -->
+	<bean id="kdtApiOrderDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<!-- 设置执行bean -->
+		<property name="jobDetail" ref="kdtApiOrder"/>
+		<!-- 设置执行任务表达式 （每5分钟执行一遍）-->
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+	<!-- 3.启动任务  -->
+	<bean lazy-init="false" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- 这里添加多个定时任务触发器，对应第2步的bean id --> 
+				<ref local="kdtApiOrderDoTime"/>
+			</list>
+		</property>
+	</bean>
+</beans>

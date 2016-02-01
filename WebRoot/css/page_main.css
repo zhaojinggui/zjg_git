@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* css reset */
+html, body, div, span,  object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas,figure, figcaption, footer, header, hgroup,
+menu, nav,section, summary,
+time, mark, audio, video,button,input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family:"微软雅黑";
+  font-size: 100%;
+ }
+h2,h3,h4{font-weight: normal;}
+button{font-size:1.3em;background:url(../images/image/button_background.jpg);border-radius:0.3em;border: 0;color: #fff; background-size:100% 100%;display: block; height: 2.2em;width:86%; line-height: 2.2em; margin:6%;}
+
+/* applyPage css*/
+.main_applyPage ,
+.main_accontsPage ,
+.main_registerPage,
+.main_fingerPage{z-index:1;overflow:hidden;background: #f0f0f0; position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+.main_accontsPage h2,
+.main_applyPage h2 ,
+.main_registerPage h2,
+.main_fingerPage h2{font-size:1.3em; text-align: center; font-weight: normal;margin:1em 0;}
+.apply_inputList {width: 80%;margin:1.2em 7%; background: #fff;padding: 3%;border-radius:0.5em;}
+.apply_inputList label {height: 3em; color: #737373; line-height: 3em;position:relative; display: block;border-bottom:1px solid #f0f0f0; }
+.apply_inputList label:last-child {border-bottom: 0;}
+.apply_inputList label input{padding-left:33%; width:67%;background:transparent; border:0;font-size: 1em; display:block;background: transparent; height:3em;position:absolute;left:0;top:0;float: right;font-family: inherit;}
+button.submit{font-size:1.3em;background:url(../images/image/button_background.jpg);border-radius:0.3em;border: 0;color: #fff; background-size:100% 100%;display: block; height: 2.2em;width:86%; line-height: 2.2em; margin:1em auto;}
+.prompt_massge {color: red; display: block; font-size: 1em; text-align: center;}
+
+.main_applyPage_next {display:none;z-index:2;overflow:hidden;background:rgba(0,0,0,0.82);color: #fff; position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+.main_applyPage_next p{font-size: 0.8em;margin:.2em 0 .2em; text-align: center;}
+.main_applyPage_next img.erweima{display:block;margin:0 24%; width:50%;border:0.5em solid rgba(255,255,255,0.4);}
+.main_applyPage_next span.right_img{display:block;margin:0.2em auto 0; width:3.75em; height:3.75em;border-radius:3.25em;background: url(../images/image/right.png) no-repeat #fff; background-size: 100% 100%; }
+.main_applyPage_next h2{font-size: 1.35em; text-align: center;margin:0.3em 0;}
+.main_applyPage_next h3{font-size: 0.82em; text-align: center;margin:0.5em 0;}
+.main_applyPage_next h4{font-size: 1em;margin:0.3em 6%;}
+.main_applyPage_next .button_card {font-size:1.3em;border:2px solid #fff;background:transparent; border-radius:0.3em;color:#fff;display: block; height: 2.2em;line-height:0;width:70%;  margin:.35em auto;}
+
+/*acctonsPage css*/
+.main_accontsPage label {font-size: 1.3em;}
+.acctonsPage_inputList {background: #fff; width:90%; height: 9em;padding:1.5em 5%;}
+.tel_yzm {border:1px solid #cdcbcb;border-bottom: 0; margin-bottom: 1em;}
+.tel_yzm label {font-size: 1em;padding-left: 3em;border-bottom:1px solid #cdcbcb; color: #858585; height: 3em;display: block; line-height: 3em;}
+.tel_yzm label.tel {background:url(../images/image/tel.jpg) no-repeat left center; background-size: auto 100%;}
+.tel_yzm label.yzm {background:url(../images/image/rzm.jpg) no-repeat left center; background-size: auto 100%;}
+.tel_yzm label span{display: block; height: 3em;line-height: 3em;float: left;}
+.tel_yzm label input{background:transparent;font-size: 1em;display: block; height: 3em; width:75%;padding:0 0 0 10px; float: left;}
+.main_accontsPage label input[type="radio"]{height: 1em;width:1em;}
+
+/* main_registerPage */
+.main_registerPage {background:url(../images/image/register_background.jpg) no-repeat left bottom #fff;background-size: 100% auto;}
+.register_inputList {border:1px solid #cdcbcb;border-bottom: 0; width:86%;margin:6%;background:#fff;}
+.register_inputList label {font-size: 1em;padding-left:1em;border-bottom:1px solid #cdcbcb; color: #000; height: 3em;display: block; line-height: 3em;}
+.register_inputList label span{width: 28%;display: block;float: left; height: 3em;line-height: 3em;}
+.register_inputList label input{background:transparent;width: 72%;font-size:0.75em;display: block;float: left; height: 4em;line-height: 4em;color: #858585;}
+.register_inputList label.yzm_input input{width: 40%;padding-right: 32%;}
+.register_inputList label.yzm_input{position: relative;}
+.register_inputList label.yzm_input button{font-size:0.75em;position: absolute;  right: 2%; top:0.8em;margin:0;padding:0;display: block;width: 25%; height: 2.2em;}
+
+/* main_fingerPage css */
+.main_fingerPage .register_inputList label {height: 2.2em;line-height: 2.2em;}
+.main_fingerPage .register_inputList label span{width: 45%;display: block;float: left; height: 2.2em;line-height: 2.2em;}
+.main_fingerPage label input{background:transparent;width: 55%;font-size:1em;display: block;float: left; height: 2.2em;line-height: 2.2em;color: #858585;}
+.main_fingerPage label.image { height: 4em;line-height: 4em;}
+.main_fingerPage label.image span{ height: 4em;line-height: 4em;}
+.main_fingerPage label.image img , .class_list img.image{ height: 3.5em;margin:0.25em 0;border-radius: 0.5em;}
+
+/* teacherPage css */
+.main_fingerPage .class_list label{height: 5em !important;}
+.left_main{width:78%; display: block; float: left; height: 5em}
+.left_main  img{ display: block; float: left; height: 4em; margin:0.5em; margin-left: 0;}
+.left_main h3{font-size:1rem;  color:#000;display: block; height: 1.5em;}
+.left_main span{font-size:0.8em; color:#858585;display: block;width: 60% !important; height: 1.25em !important;}
+.right_main{width:22%;color: #e98631;background:url(../images/image/read_more.jpg) no-repeat right center;background-size: auto 100%;  display: block; float: left; height: 5em;line-height: 5em; !important}
+
+/* class_listPage css */
+.class_list img.image {margin:0.75em 1em 0.75em 0;}
+.left_main h3  {margin-top: .5em;}
+.left_main h3 strong {color: #e98631;font-weight: normal;margin-left: .75em;}
+h2.en_class{margin:1em 0 !important;}
+
+@media (device-width:375px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone 6 */
+	body{font-size: 20px;}	
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:.8em auto;}
+
+	.tel_yzm label input{width:74%;}
+}
+@media (device-width:414px) and (-webkit-min-device-pixel-ratio:3.0){/* 兼容iphone6 plus */
+	body{font-size: 22px;}
+	.apply_inputList label ,
+	.apply_inputList label input{height:3.3em; line-height: 3.3em;}
+	button.submit{margin:0.5em auto;}
+
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:.8em auto;}
+}
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+	body{font-size: 16px;}
+	.apply_inputList label ,
+	.apply_inputList label input{height:2.75em; line-height: 2.75em;}
+	button.submit{margin:6% auto;}
+
+	.main_fingerPage h2 {margin:0.5em auto;}
+	.main_fingerPage .register_inputList label,
+	.main_fingerPage .register_inputList label span,
+	.main_fingerPage .register_inputList label input {height: 2em;line-height: 2em;}
+	.main_fingerPage label.image { height: 4em;line-height: 4em;}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+	.main_applyPage_next p,
+	.main_applyPage_next img.erweima,
+	.main_applyPage_next span.right_img,
+	.main_applyPage_next h2,
+	.main_applyPage_next h3,
+	.main_applyPage_next h4{margin:1em auto;}
+	.main_applyPage_next h4{margin-left:6% }
+}
+
+@media screen (min-width: 1024px){
+	body{font-size:30px;}
+}
+.main_fingerPage .nomargin {margin:.4em auto;}
+body.auto_scroll .main_applyPage ,
+body.auto_scroll .main_accontsPage ,
+body.auto_scroll .main_registerPage,
+body.auto_scroll .main_fingerPage{overflow-y:auto; }
